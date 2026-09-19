@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CET Tinker Space</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="cursor-glow"></div>
+
+  <header>
+    <nav class="navbar">
+      <a href="#home" class="logo">TINKER<span>SPACE</span></a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#features">Features</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <button id="themeBtn" class="icon-btn">☾</button>
+        <button id="menuBtn" class="menu-btn">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero reveal" id="home">
+    <div class="hero-content">
+      <span class="badge">WELCOME</span>
+      <h1>Build Something <span>Better.</span></h1>
+      <p>A clean, modern and user-friendly experience designed to make things simpler.</p>
+      <div class="hero-buttons">
+        <a href="#services" class="btn primary">Get Started</a>
+        <a href="#about" class="btn secondary">Learn More</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="hero.jpeg" alt="Hero Image">
+    </div>
+  </section>
+
+  <section class="quick-section reveal">
+    <div class="quick-card">
+      <div class="quick-icon">⚡</div>
+      <div>
+        <h3>Fast</h3>
+        <p>Quick and simple experience.</p>
+      </div>
+    </div>
+    <div class="quick-card">
+      <div class="quick-icon">✓</div>
+      <div>
+        <h3>Reliable</h3>
+        <p>Designed for everyday use.</p>
+      </div>
+    </div>
+    <div class="quick-card">
+      <div class="quick-icon">◈</div>
+      <div>
+        <h3>Modern</h3>
+        <p>Clean and responsive design.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reveal" id="about">
+    <div class="section-heading">
+      <span class="small-title">ABOUT US</span>
+      <h2>Designed around <span>people.</span></h2>
+      <p>We focus on creating simple experiences that are easy to understand and enjoyable to use.</p>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-image">
+        <img src="about.jpeg" alt="About">
+      </div>
+
+      <div class="about-content">
+        <h3>Everything you need in one place.</h3>
+        <p>Our goal is to provide users with a clear, accessible and useful experience.</p>
+
+        <div class="check-list">
+          <p>✓ Simple navigation</p>
+          <p>✓ Responsive design</p>
+          <p>✓ Easy to understand</p>
+          <p>✓ Fast and functional</p>
+        </div>
+
+        <button class="btn primary" id="learnBtn">Learn More</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt-section reveal" id="services">
+    <div class="section-heading center">
+      <span class="small-title">OUR SERVICES</span>
+      <h2>What can we <span>offer?</span></h2>
+      <p>Explore the services designed to make your experience easier.</p>
+    </div>
+
+    <div class="search-container">
+      <input type="text" id="cardSearch" placeholder="Search services...">
+    </div>
+
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="design">Design</button>
+      <button class="filter-btn" data-filter="technology">Technology</button>
+      <button class="filter-btn" data-filter="support">Support</button>
+    </div>
+
+    <div class="card-grid">
+      <div class="service-card reveal" data-category="design">
+        <div class="card-icon">✦</div>
+        <h3>Creative Design</h3>
+        <p>Clean and modern solutions focused on usability and visual appeal.</p>
+        <button class="text-btn" onclick="openModal('Creative Design')">Explore →</button>
+      </div>
+
+      <div class="service-card reveal" data-category="technology">
+        <div class="card-icon">⌘</div>
+        <h3>Technology</h3>
+        <p>Smart digital solutions designed around real-world problems.</p>
+        <button class="text-btn" onclick="openModal('Technology')">Explore →</button>
+      </div>
+
+      <div class="service-card reveal" data-category="support">
+        <div class="card-icon">?</div>
+        <h3>Support</h3>
+        <p>Helpful assistance whenever users need it.</p>
+        <button class="text-btn" onclick="openModal('Support')">Explore →</button>
+      </div>
+
+      <div class="service-card reveal" data-category="technology">
+        <div class="card-icon">◉</div>
+        <h3>Smart Solutions</h3>
+        <p>Practical features that improve the overall user experience.</p>
+        <button class="text-btn" onclick="openModal('Smart Solutions')">Explore →</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-section reveal">
+    <div class="stat">
+      <h2 class="counter" data-target="24">0</h2>
+      <p>Events</p>
+    </div>
+    <div class="stat">
+      <h2 class="counter" data-target="50">0</h2>
+      <p>Projects</p>
+    </div>
+    <div class="stat">
+      <h2 class="counter" data-target="100">0</h2>
+      <p>Members</p>
+    </div>
+    <div class="stat">
+      <h2>24/7</h2>
+      <p>Community</p>
+    </div>
+  </section>
+
+  <section class="section reveal" id="features">
+    <div class="section-heading center">
+      <span class="small-title">WHY CHOOSE US</span>
+      <h2>Simple. Useful. <span>Effective.</span></h2>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature reveal">
+        <span>01</span>
+        <h3>Easy to Use</h3>
+        <p>Simple interfaces that don't require unnecessary learning.</p>
+      </div>
+      <div class="feature reveal">
+        <span>02</span>
+        <h3>Responsive</h3>
+        <p>Works smoothly across phones, tablets and desktops.</p>
+      </div>
+      <div class="feature reveal">
+        <span>03</span>
+        <h3>Accessible</h3>
+        <p>Important information stays easy to find and understand.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta reveal">
+    <div>
+      <span class="small-title">GET STARTED</span>
+      <h2>Ready to make <span>a difference?</span></h2>
+      <p>Take the first step today.</p>
+    </div>
+    <button class="btn white" onclick="openModal('Get Started')">Get Started →</button>
+  </section>
+
+  <section class="section reveal" id="contact">
+    <div class="section-heading center">
+      <span class="small-title">CONTACT</span>
+      <h2>Let's talk.</h2>
+      <p>Have a question? Send us a message.</p>
+    </div>
+
+    <form class="contact-form" id="contactForm">
+      <div class="input-row">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Email Address" required>
+      </div>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button class="btn primary" type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <div class="footer-logo">TINKER<span>SPACE</span></div>
+    <p>&copy; 2026 CET Tinker Space. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </footer>
+
+  <div class="modal" id="modal">
+    <div class="modal-box">
+      <button class="close-btn" onclick="closeModal()">&times;</button>
+      <span class="small-title">MORE INFORMATION</span>
+      <h2 id="modalTitle">Service</h2>
+      <p>This section can be customized depending on the website and problem statement given during the competition.</p>
+      <button class="btn primary" onclick="closeModal()">Continue</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">✓ Message sent successfully!</div>
+
+  <button id="topBtn" class="top-btn">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
